@@ -10,10 +10,10 @@ const games = [
   {
     id: 1,
     number: "GAME 01",
-    title: "Coming Soon",
-    description: "Game details will be added soon.",
-    image: null,
-    url: null,
+    title: "AI Factory",
+    description: "Step into the AI Factory and test your AI skills.",
+    image: "/assets/ai_factory_card.jpg",
+    url: "https://ai-factory-game.vercel.app/",
     accent: "cyan"
   },
   {

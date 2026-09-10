@@ -21,7 +21,7 @@ const GamesZone = () => {
         {/* Futuristic Dashboard Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-300 font-mono text-xs tracking-widest uppercase mb-4 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
           <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-          <span>IAE × EEE CENTRAL PORTAL</span>
+          <span>IAE CENTRAL PORTAL</span>
         </div>
 
         {/* Title */}

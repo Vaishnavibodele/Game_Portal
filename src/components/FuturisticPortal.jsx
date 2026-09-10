@@ -72,10 +72,10 @@ const FuturisticPortal = () => {
 
       {/* Floating Corner HUD Data Markers */}
       <div className="absolute top-2 left-2 text-[9px] font-mono text-cyan-400/60 tracking-widest uppercase">
-        SYS.LOC // 0xIAE
+        SYS.LOC // DIGITAL
       </div>
       <div className="absolute bottom-2 right-2 text-[9px] font-mono text-violet-400/60 tracking-widest uppercase">
-        PORTAL.READY // EEE
+        SYSTEM.READY // ACTIVE
       </div>
     </div>
   );

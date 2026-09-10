@@ -46,7 +46,7 @@ const LandingPage = () => {
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-300 font-mono text-xs tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(0,240,255,0.15)]"
         >
           <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-          <span>IAE × EEE EXPERIENTIAL PORTAL</span>
+          <span>EXPERIENTIAL GAME PORTAL</span>
         </motion.div>
 
         {/* Hero Headline */}

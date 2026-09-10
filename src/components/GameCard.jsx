@@ -64,10 +64,10 @@ const GameCard = ({ game }) => {
       {/* Light sweep hover overlay */}
       <div className="absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:animate-light-sweep pointer-events-none" />
 
-      {/* Top Bar: Game Number & Badge */}
+      {/* Top Bar: Game Name (or Number for placeholders) & Status Badge */}
       <div className="flex items-center justify-between mb-4">
         <span className={`font-orbitron font-extrabold text-base md:text-lg tracking-wider ${style.numberText}`}>
-          {number}
+          {url ? title : number}
         </span>
         <span className={`text-[10px] font-mono tracking-widest uppercase px-2.5 py-0.5 rounded-full border ${style.badge}`}>
           {url ? "READY" : "COMING SOON"}
@@ -79,13 +79,10 @@ const GameCard = ({ game }) => {
         <AbstractGameVisual id={id} accent={accent} image={image} title={title} />
       </div>
 
-      {/* Content Area */}
+      {/* Content Area: Description & CTA */}
       <div className="flex flex-col flex-grow justify-between">
         <div className="mb-5">
-          <h3 className="font-orbitron font-bold text-base md:text-lg tracking-wide text-white group-hover:text-cyan-200 transition-colors mb-1">
-            {title}
-          </h3>
-          <p className="text-xs text-slate-400 line-clamp-2">
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-2">
             {description}
           </p>
         </div>

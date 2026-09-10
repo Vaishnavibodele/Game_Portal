@@ -8,13 +8,19 @@ import { Scan, HelpCircle, Zap, Lock, Cpu } from 'lucide-react';
 const AbstractGameVisual = ({ id, accent = "cyan", image = null, title = "Game" }) => {
   if (image) {
     return (
-      <div className="relative w-full h-full overflow-hidden rounded-lg">
+      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.15)] group-hover:border-cyan-400/60 group-hover:shadow-[0_0_25px_rgba(0,240,255,0.35)] transition-all duration-500">
+        {/* Real Game Artwork */}
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" 
+          className="w-full h-full object-cover transform group-hover:scale-[1.04] transition-transform duration-700 ease-out" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+
+        {/* Subtle Dark Gradient Overlay for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1128]/80 via-transparent to-transparent pointer-events-none" />
+
+        {/* Subtle Ambient Light Sweep on Hover */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
       </div>
     );
   }
@@ -111,7 +117,7 @@ const AbstractGameVisual = ({ id, accent = "cyan", image = null, title = "Game" 
   };
 
   return (
-    <div className={`relative w-full h-40 md:h-44 rounded-lg bg-gradient-to-br ${style.gradient} border ${style.border} overflow-hidden flex items-center justify-center group-hover:border-opacity-60 transition-all duration-300`}>
+    <div className={`relative w-full aspect-[16/9] rounded-lg bg-gradient-to-br ${style.gradient} border ${style.border} overflow-hidden flex items-center justify-center group-hover:border-opacity-60 transition-all duration-300`}>
       {/* Background Micro Grid */}
       <div 
         className="absolute inset-0 opacity-15"
