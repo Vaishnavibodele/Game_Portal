@@ -5,8 +5,7 @@ import GameGrid from '../components/GameGrid';
 
 /**
  * IAE GAMES ZONE — Main game selection dashboard.
- * Features a sleek HUD header, 5 interactive placeholder game cards in a 3+2 layout,
- * and high-end interactive card feedback.
+ * Clean, futuristic, premium dashboard layout.
  */
 const GamesZone = () => {
   return (
@@ -16,11 +15,11 @@ const GamesZone = () => {
       <motion.div
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="text-center max-w-3xl mx-auto mb-10 md:mb-14"
+        transition={{ duration: 0.6 }}
+        className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
       >
         {/* Futuristic Dashboard Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-violet-500/30 bg-violet-950/30 text-violet-300 font-mono text-xs tracking-widest uppercase mb-4 shadow-[0_0_15px_rgba(139,92,246,0.15)]">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-300 font-mono text-xs tracking-widest uppercase mb-4 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
           <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
           <span>IAE × EEE CENTRAL PORTAL</span>
         </div>
@@ -32,15 +31,15 @@ const GamesZone = () => {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base text-slate-300 font-sans tracking-wide">
-          Step in. Pick a game. Play your way.
+          Choose your challenge.
         </p>
       </motion.div>
 
       {/* 5-Card Responsive Game Grid */}
       <motion.div
-        initial={{ opacity: 0, y: 25 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
         className="w-full my-auto"
       >
         <GameGrid games={games} />
