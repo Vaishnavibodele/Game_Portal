@@ -33,16 +33,17 @@ const games = [
     image: "/assets/squid_game_card.jpg",
     url: "https://fabulous-youtiao-31f6a2.netlify.app/",
     accent: "teal"
+  },
   {
-  id: 4,
-  number: "GAME 04",
-  title: "IAE Imposter",
-  description: "Think you’re sharp? 🕵️ Catch the Imposter!",
-  image: null,
-  url: "https://find-the-impostor-main.vercel.app/",
-  accent: "orange"
-},
-{
+    id: 4,
+    number: "GAME 04",
+    title: "IAE Imposter",
+    description: "Think you’re sharp? 🕵️ Catch the Imposter!",
+    image: "/assets/imposter_card.webp",
+    url: "https://find-the-impostor-main.vercel.app/",
+    accent: "orange"
+  },
+  {
     id: 5,
     number: "GAME 05",
     title: "Coming Soon",
