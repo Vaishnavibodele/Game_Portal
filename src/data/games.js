@@ -38,9 +38,9 @@ const games = [
     id: 4,
     number: "GAME 04",
     title: "Coming Soon",
-    description: "Game details will be added soon.",
+    description: "Think you’re sharp? 🕵️ Catch the Imposter!”,
     image: null,
-    url: null,
+    url: "https://find-the-impostor-main.vercel.app/",
     accent: "orange"
   },
   {
