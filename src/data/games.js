@@ -37,9 +37,9 @@ const games = [
   {
     id: 4,
     number: "GAME 04",
-    title: "IAE Imposter",
-    description: "Think you’re sharp? 🕵️ Catch the Imposter!",
-    image: "/assets/imposter_card.webp",
+    title: "Imposter",
+    description: "Detect the hidden imposter in this futuristic digital investigation challenge.",
+    image: "/assets/imposter_card.jpg",
     url: "https://find-the-impostor-main.vercel.app/",
     accent: "orange"
   },
