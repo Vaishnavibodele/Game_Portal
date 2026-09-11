@@ -19,19 +19,19 @@ const games = [
   {
     id: 2,
     number: "GAME 02",
-    title: "Coming Soon",
-    description: "Game details will be added soon.",
-    image: null,
-    url: null,
+    title: "Puzzle",
+    description: "Solve futuristic 3D geometric puzzles and challenge your spatial logic.",
+    image: "/assets/puzzle_card.jpg",
+    url: "https://puzzle-game-ten-pi.vercel.app/display?room=EXPO26",
     accent: "purple"
   },
   {
     id: 3,
     number: "GAME 03",
-    title: "Coming Soon",
-    description: "Game details will be added soon.",
-    image: null,
-    url: null,
+    title: "IAE Squid Game",
+    description: "Enter the high-stakes arena and navigate intense futuristic challenges.",
+    image: "/assets/squid_game_card.jpg",
+    url: "https://fabulous-youtiao-31f6a2.netlify.app/",
     accent: "teal"
   },
   {
