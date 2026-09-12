@@ -1,11 +1,28 @@
 /**
- * Centralized dataset for the 5 separately deployed games.
- * Configured with placeholder data until official game metadata & URLs are provided.
- *
- * To update when game details are ready:
- * 1. Modify title, description, image path/URL, and deployed game URL.
- * 2. The entire application UI and card interactions will adapt automatically.
+ * Helper to dynamically resolve game URLs and enablement status from environment variables.
  */
+const getGameUrl = (urlKeys, enableKeys) => {
+  if (enableKeys) {
+    for (const key of enableKeys) {
+      const val = import.meta.env[key];
+      if (val !== undefined && val !== null) {
+        if (String(val).toLowerCase() === 'false' || val === false) {
+          return null;
+        }
+      }
+    }
+  }
+
+  for (const key of urlKeys) {
+    const val = import.meta.env[key];
+    if (val && typeof val === 'string' && val.trim() !== '') {
+      return val;
+    }
+  }
+
+  return null;
+};
+
 const games = [
   {
     id: 1,
@@ -13,7 +30,7 @@ const games = [
     title: "AI Factory",
     description: "Step into the AI Factory and test your AI skills.",
     image: "/assets/ai_factory_card.jpg",
-    url: "https://ai-factory-game.vercel.app/",
+    url: getGameUrl(['GAME_1_URL', 'VITE_GAME_1_URL'], ['ENABLE_GAME_1_LINK', 'VITE_ENABLE_GAME_1_LINK']),
     accent: "cyan"
   },
   {
@@ -22,7 +39,7 @@ const games = [
     title: "Puzzle",
     description: "Solve futuristic 3D geometric puzzles and challenge your spatial logic.",
     image: "/assets/puzzle_card.jpg",
-    url: "https://puzzle-game-ten-pi.vercel.app/display?room=EXPO26",
+    url: getGameUrl(['GAME_2_URL', 'VITE_GAME_2_URL'], ['ENABLE_GAME_2_LINK', 'VITE_ENABLE_GAME_2_LINK']),
     accent: "purple"
   },
   {
@@ -31,7 +48,7 @@ const games = [
     title: "IAE Squid Game",
     description: "Enter the high-stakes arena and navigate intense futuristic challenges.",
     image: "/assets/squid_game_card.jpg",
-    url: "https://fabulous-youtiao-31f6a2.netlify.app/",
+    url: getGameUrl(['GAME_3_URL', 'VITE_GAME_3_URL'], ['ENABLE_GAME_3_LINK', 'VITE_ENABLE_GAME_3_LINK']),
     accent: "teal"
   },
   {
@@ -40,7 +57,10 @@ const games = [
     title: "Imposter",
     description: "Detect the hidden imposter in this futuristic digital investigation challenge.",
     image: "/assets/imposter_card.jpg",
-    url: "https://find-the-impostor-main.vercel.app/",
+    url: getGameUrl(
+      ['GAME_4_URL', 'VITE_GAME_4_URL', 'GAME_LINK', 'VITE_GAME_LINK'],
+      ['ENABLE_GAME_4_LINK', 'VITE_ENABLE_GAME_4_LINK', 'ENABLE_GAME_LINK', 'VITE_ENABLE_GAME_LINK']
+    ),
     accent: "orange"
   },
   {
@@ -49,7 +69,7 @@ const games = [
     title: "Coming Soon",
     description: "Game details will be added soon.",
     image: null,
-    url: null,
+    url: getGameUrl(['GAME_5_URL', 'VITE_GAME_5_URL'], ['ENABLE_GAME_5_LINK', 'VITE_ENABLE_GAME_5_LINK']),
     accent: "violet"
   }
 ];
